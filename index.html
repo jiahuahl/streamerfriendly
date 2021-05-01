@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>Streamer Friendly</title>
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta
       http-equiv="Content-Security-Policy"
@@ -12,12 +12,86 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
+    <!-- Photon Stylesheet -->
+    <link rel="stylesheet" href="src/css/photon.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="src/css/custom.css" />
   </head>
+
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>, Chromium
-    <span id="chrome-version"></span>, and Electron
-    <span id="electron-version"></span>.
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Streamer Friendly</h1>
+      </header>
+
+      <div class="window-content">
+        <div class="pane-group">
+          <!-- Sidebar -->
+          <div class="pane-sm sidebar">
+            <div class="folder">Folders???</div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="pane">
+            <div class="root">
+              <div class="center">
+                <p>Honestly, I have no idea what we're making</p>
+
+                <!-- Search Bar -->
+                <form>
+                  <div class="form-group">
+                    <div class="search">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search for files..."
+                      />
+                      <button class="btn btn-large btn-primary button">
+                        <span class="icon icon-search icon-padding"></span>
+                        Search
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <!-- Table with files -->
+                <!-- Can map the actual files in a folder -->
+                <table class="table-striped">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>File Type</th>
+                      <th>Size</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>A</td>
+                      <td>PNG</td>
+                      <td>28 Kb</td>
+                    </tr>
+                    <tr>
+                      <td>B</td>
+                      <td>GIF</td>
+                      <td>28 Kb</td>
+                    </tr>
+                    <tr>
+                      <td>C</td>
+                      <td>JPEG</td>
+                      <td>28 Kb</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="toolbar toolbar-footer">
+        <h1 class="title">Something dumb like: "Made with &#9829;" lmao</h1>
+      </footer>
+    </div>
 
     <!-- You can also require other files to run in this process -->
     <script src="./dist/renderer.js"></script>
