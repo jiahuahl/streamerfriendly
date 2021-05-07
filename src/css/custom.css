@@ -1,0 +1,28 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+}
+
+.search {
+  display: inline-block;
+  margin: 0 0 1rem 0;
+}
+
+.folder {
+  margin: 1rem 2rem 0 2rem;
+}
+
+.button {
+  margin: 0.5rem;
+  color: white;
+}
+
+.icon-padding {
+  margin-right: 0.25rem;
+}
