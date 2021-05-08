@@ -1,8 +1,8 @@
 import { app, BrowserWindow } from "electron";
 import * as path from "path";
+import { Database, DatabaseModel } from "./database";
 
 function createWindow() {
-  // Create the browser window.
   const mainWindow = new BrowserWindow({
     height: 600,
     webPreferences: {
@@ -11,10 +11,7 @@ function createWindow() {
     width: 800,
   });
 
-  // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, "../index.html"));
-
-  // Open the DevTools.
   mainWindow.webContents.openDevTools();
 }
 
@@ -22,6 +19,7 @@ function createWindow() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", () => {
+  const database = new Database()
   createWindow();
 
   app.on("activate", function () {
