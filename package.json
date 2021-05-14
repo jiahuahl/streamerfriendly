@@ -21,9 +21,9 @@
     "eslint-plugin-prettier": "3.4.0",
     "prettier": "2.2.1",
     "typescript": "3.9.5",
-    "@types/fs-extra": "^9.0.11"
+    "@types/fs-extra": "9.0.11"
   },
   "dependencies": {
-    "fs-extra": "^8.1.0"
+    "fs-extra": "8.1.0"
   }
 }
